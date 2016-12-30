@@ -1,0 +1,110 @@
+/* base */
+body {
+  padding-bottom: 50px; }
+
+header {
+  background-color: #2b78e4; }
+  header a, header a:hover, header a:visited {
+    color: #fff;
+    text-decoration: none; }
+
+.custom-name {
+  color: #fff; }
+
+h2, h4 {
+  text-align: center;
+  margin: 0; }
+
+/* positioning */
+.custom-cover-inside {
+  position: relative;
+  left: 20px;
+  top: 120px;
+  z-index: 1; }
+  .custom-cover-inside .custom-name {
+    position: relative;
+    left: 20px;
+    top: 105px; }
+
+.custom-middle-nav {
+  position: relative;
+  left: 230px; }
+
+/* photos page */
+.hover {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: inline; }
+
+.overlay {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 25px;
+  width: 100%; }
+
+/* top section photos */
+.custom-logo-img {
+  height: 25px;
+  width: 25px; }
+
+.custom-cover {
+  background: url("../images/hogwarts_small.jpg") no-repeat center center;
+  background-size: cover;
+  height: 300px; }
+
+/* about page */
+.custom-info {
+  margin: 10px 0; }
+
+.custom-info-label {
+  font-weight: bold; }
+
+.custom-info-form {
+  text-align: left; }
+
+/* timeline page */
+.custom-margin {
+  padding-right: 0; }
+
+/* each comment on a post, any post's poster info */
+.custom-comment, .custom-post-header {
+  margin: 10px 0; }
+
+/* poster's profile pic */
+.custom-poster {
+  height: 55px;
+  width: 55px; }
+
+/* people who liked the post */
+.custom-post-liked {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 15px 0; }
+
+/* friends page */
+.custom-friend {
+  padding: 15px 0;
+  margin: 15px 0;
+  border: 1px solid #e7e7e7; }
+
+.custom-friend-align {
+  margin: 30px 0; }
+
+.custom-friend-pic {
+  height: 120px; }
+
+/* photos page */
+.custom-photos img {
+  margin: 10px 8px; }
+
+.overlay {
+  display: none;
+  color: #fff;
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.hover:hover .overlay {
+  display: block; }
+
+/*# sourceMappingURL=screen.css.map */

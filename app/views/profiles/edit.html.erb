@@ -1,0 +1,32 @@
+
+<%= render partial: 'users/shared/cover' %>
+
+<section class="row">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>Edit Profile</h2>
+    </div>
+    <div class="panel-body">
+
+      <%= form_for [@profile.user, @profile] do |f| %>
+        <!-- LEFT PANEL (INFO) -->
+        <div class="col-sm-4 col-sm-offset-1">
+
+          <h4>Basic Information</h3>
+          <%= render 'basic_information_form', f: f %>
+          <h3>Contact Information</h3>
+          <%= render 'contact_information_form', f: f %>
+
+          <!-- RIGHT PANEL (WORDS/ABOUT ME) -->
+          <div class="col-sm-5 col-sm-offset-1">
+            <%= render 'about_me_form', f: f %>
+          </div>
+
+          <%= f.submit "Update Profile", class: "btn btn-primary btn-lg btn-block", id: "update-profile" %>
+        <% end %>
+        </div><!-- panel body -->
+    </div><!-- panel -->
+
+</section><!-- about section -->
+
+

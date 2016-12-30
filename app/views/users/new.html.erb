@@ -1,0 +1,23 @@
+
+<% if user_signed_in? %>
+  <%= render "shared/sign_out_page" %>
+<% else %>
+  <div class="row v-offset">
+
+    <aside class="col-sm-5 col-sm-offset-1">
+      <h1>Connect with your friends!</h1>
+      <ul class="list-simple list-right">
+        <li><strong>Updates</strong> in your news feed keep you up to speed</li>
+        <li><strong>Post</strong> to share your thoughts and exciting news</li>
+        <li><strong>Comment</strong> and be a part of the conversation</li>
+        <li><strong>Like</strong> show your support by liking likable things</li>
+      </ul>
+    </aside>
+
+    <section class="col-sm-4 col-sm-offset-1">
+      <h1>Sign Up</h1>
+      <%= render "user_sign_up_form" %>
+    </section>
+
+  </div>
+<% end %>

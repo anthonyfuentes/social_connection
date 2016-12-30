@@ -1,0 +1,38 @@
+
+<div class="row custom-info">
+  <div class="col-xs-4 custom-info-label">
+    <div class="row">
+      Birthday
+    </div>
+  </div>
+  <div class="col-xs-8"><%= @profile.birthdate %></div>
+</div>
+
+<div class="row custom-info">
+  <div class="col-xs-4 custom-info-label">
+    <div class="row">
+      College
+    </div>
+  </div>
+  <div class="col-xs-8"><%= f.text_field :education, placeholder: "school name" %></div>
+</div>
+
+<div class="row custom-info">
+  <div class="col-xs-4 custom-info-label">
+    <div class="row">
+      Hometown
+    </div>
+  </div>
+  <div class="col-xs-8"><%= f.text_field :home_town, placeholder: "hometown, country" %></div>
+</div>
+
+<div class="row custom-info">
+  <div class="col-xs-4 custom-info-label">
+    <div class="row">
+      Currently Lives
+    </div>
+  </div>
+  <div class="col-xs-8"><%= f.text_field :current_town, placeholder: "current town, country" %></div>
+</div>
+
+

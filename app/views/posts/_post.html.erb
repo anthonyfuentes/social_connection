@@ -1,0 +1,24 @@
+
+<% author = post.author %>
+
+<article class="panel panel-default">
+  <div class="panel-body">
+    <div class="custom-post-header clearfix">
+      <div class="row">
+        <div class="col-xs-2">
+          <%= link_to profile_photo(id: author.id, size: :thumb),
+                                    user_timeline_path(author.id) %>
+      </div>
+      <div class="col-xs-10">
+        <%= link_to author.name, user_profile_path(author) %>
+        <p>Posted on <time datetime="<%= post.created_at %>"><%= post.created_at %></time></p>
+      </div>
+      </div>
+    </div>
+    <p>
+    <%= post.body %>
+    </p>
+  </div>
+
+  <%= render 'posts/post_panel_footer', post: post %>
+</article>

@@ -1,0 +1,23 @@
+
+<%= render partial: 'users/shared/cover' %>
+
+<section class="row">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>Friends</h2>
+    </div>
+
+    <div class="panel-body">
+      <div class="col-sm-12">
+
+        <% @user.friends.each_slice(2) do |friends| %>
+          <%= render 'friendings/friends_row', friends: friends %>
+        <% end %>
+
+      </div><!-- left column -->
+    </div><!-- panel body -->
+  </div><!-- panel -->
+
+</section><!-- friends section -->
+
+</main>

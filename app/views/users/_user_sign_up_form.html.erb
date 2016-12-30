@@ -1,0 +1,21 @@
+
+<%= simple_form_for @user do |f| %>
+
+  <%= f.input :first_name, label: false,
+      placeholder: "First name" %>
+
+  <%= f.input :last_name, label: false,
+    placeholder: "Last name" %>
+
+  <%= f.input :email, label: false,
+    placeholder: "Email" %>
+
+  <%= f.input :password, label: false,
+    placeholder: "Password (minimum 5 characters)"%>
+
+  <%= f.input :password_confirmation, label: false,
+    placeholder: "Password confirmation" %>
+
+  <%= f.submit "Sign Up", class: "btn btn-block btn-success" %>
+
+<% end %>

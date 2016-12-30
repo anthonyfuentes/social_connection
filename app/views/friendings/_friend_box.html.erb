@@ -1,0 +1,18 @@
+
+<div class="col-sm-6 custom-friend">
+  <div class="col-sm-4 text-center">
+    <%= link_to profile_photo(id: friend.id, size: :small,
+                              styling: 'img-thumbnail custom-friend-pic'),
+                              user_timeline_path(friend) %>
+</div>
+<div class="col-sm-4 custom-friend-align">
+  <%= link_to friend.name, user_timeline_path(friend) %>
+  <p>
+  <%= link_to "Friends (#{ friend_count(friend) })",
+    user_friends_path(friend) %>
+</p>
+</div>
+<div class="col-sm-4 custom-friend-align">
+  <%= user_friend_link(friend.id) %>
+</div><!-- unfriend button -->
+</div><!-- friend tile -->

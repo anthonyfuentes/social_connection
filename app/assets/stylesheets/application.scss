@@ -1,0 +1,73 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*
+  * variables
+  * positioning
+  * modules
+    * nav
+    * lists
+*/
+
+/*
+  VARIABLES
+*/
+$primary-blue: #2b78e4;
+$primary-white: #fff;
+$bs-grey: #e7e7e7;
+
+/*
+  POSITIONING
+*/
+.v-offset {
+  margin-top: 75px;
+}
+
+/*
+  MODULES
+*/
+
+/* nav */
+.navbar-static-top {
+  background-color: $primary-blue;
+  a {
+    color: $primary-white;
+  }
+}
+
+.icon-bar {
+  background-color: white;
+}
+
+.navbar-brand {
+  color: $primary-white;
+}
+
+.nav-label {
+  color: $primary-white;
+}
+
+.navbar-center {
+  margin-left: 200px;
+}
+
+#navbar-search {
+  .form-control {
+    width: 300px;
+  }
+}
+
+/* lists */
+.list-simple {
+  list-style: none;
+  font-size: 1.25em;
+}
+
+.list-right {
+  padding: 20px 40px 0 0;
+  > li {
+    margin: 0 0 20px 0;
+    text-align: right;
+  }
+}

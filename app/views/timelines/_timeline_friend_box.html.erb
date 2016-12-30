@@ -1,0 +1,9 @@
+
+<div class="col-sm-4">
+  <%= link_to profile_photo(id: friend.id, size: :small,
+                            styling: 'img-thumbnail custom-friend-pic'),
+                            user_timeline_path(friend) %>
+  <p class="text-center">
+    <%= link_to friend.name, user_timeline_path(friend) %>
+  </p>
+</div>

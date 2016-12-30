@@ -1,0 +1,8 @@
+
+<div class="panel-footer">
+  <%= like_link(post) %>
+  <%= post_delete(post) %>
+  <%= render 'posts/post_likes', post: post %>
+  <%= render 'comments/comment_form', commentable: post %>
+  <%= render post.sorted_comments %>
+</div>

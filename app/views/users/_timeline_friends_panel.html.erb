@@ -1,0 +1,15 @@
+
+<article class="panel panel-default">
+
+  <div class="panel-heading">
+    <h4>Friends (<%= friend_count(params[:user_id]) %>)</h4>
+  </div>
+
+  <div class="panel-body">
+    <% @user.friends.each_slice(3) do |friends| %>
+      <%= render 'timeline_friends_row', friends: friends %>
+    <% end %>
+  </div>
+
+</article>
+

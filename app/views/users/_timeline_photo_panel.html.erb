@@ -1,0 +1,13 @@
+
+<article class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Photos (<%= photo_count(params[:user_id]) %>)</h4>
+  </div>
+
+  <div class="panel-body">
+    <% @user.photos(9).each_slice(3) do |photos| %>
+      <%= render 'timeline_photos_row', photos: photos %>
+    <% end %>
+  </div>
+
+</article>

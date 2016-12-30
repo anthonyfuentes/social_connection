@@ -1,0 +1,15 @@
+
+<article class="panel panel-default">
+
+  <div class="panel-heading">
+    <h4>Recently Active Friends</h4>
+  </div>
+
+  <div class="panel-body">
+    <% @newsfeed.recently_active_friends.each_slice(3) do |friends| %>
+      <%= render 'newsfeed_friends_row', friends: friends %>
+    <% end %>
+  </div>
+
+</article>
+
