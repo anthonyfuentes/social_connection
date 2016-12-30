@@ -16,7 +16,7 @@ Fully functional social networking site.
   * Feature testing with [Capybara](https://github.com/teamcapybara/capybara)
   * Unit testing with [rspec-rails](https://github.com/rspec/rspec-rails)
   * Fixture replacement with [factory_girl](https://github.com/thoughtbot/factory_girl)
-  * Image uploading to AWS S3 handled by [Paperclip](https://github.com/thoughtbot/paperclip)
+  * Image uploading to AWS S3 using [Paperclip](https://github.com/thoughtbot/paperclip)
   * PostgreSQL database schema including polymorphic, and self-referencing associations
 2. Front-end
   * Bootstrap
