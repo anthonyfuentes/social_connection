@@ -1,29 +1,42 @@
 
-<div class="row custom-info">
-  <div class="col-xs-4 custom-info-label">
-    <div class="row">
-      College
-    </div>
-  </div>
-  <div class="col-xs-8"><%= f.text_field :education, placeholder: "school name" %></div>
-</div>
+<div class="row-list row-form">
 
-<div class="row custom-info">
-  <div class="col-xs-4 custom-info-label">
-    <div class="row">
-      Hometown
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="row">
+        <span class="list-label">Education</span>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <%= f.text_field :education,
+        placeholder: "school name" %>
     </div>
   </div>
-  <div class="col-xs-8"><%= f.text_field :home_town, placeholder: "hometown, country" %></div>
-</div>
 
-<div class="row custom-info">
-  <div class="col-xs-4 custom-info-label">
-    <div class="row">
-      Currently Lives
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="row">
+        <span class="list-label">Hometown</span>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <%= f.text_field :home_town,
+        placeholder: "hometown, country" %>
     </div>
   </div>
-  <div class="col-xs-8"><%= f.text_field :current_town, placeholder: "current town, country" %></div>
+
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="row">
+        <span class="list-label">Current Town</span>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <%= f.text_field :current_town,
+        placeholder: "current town, country" %>
+    </div>
+  </div>
+
 </div>
 
 

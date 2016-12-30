@@ -8,8 +8,10 @@
   * decoration
   * modules
     * nav
+    * cover
     * panels
     * lists
+    * forms
 */
 
 /*
@@ -28,6 +30,10 @@ $bs-grey: #e7e7e7;
 
 .inline {
   display: inline-block;
+}
+
+.full-width {
+  width: 100%;
 }
 
 /*
@@ -71,6 +77,27 @@ $bs-grey: #e7e7e7;
   }
 }
 
+/* cover */
+.cover {
+  background-size: cover;
+  height: 300px;
+}
+
+.cover-inner {
+  position: relative;
+  left: 20px;
+  top: 120px;
+  z-index: 1;
+}
+
+.cover-name {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .85);
+  position: relative;
+  left: 20px;
+  top: 100px;
+}
+
 /* panels */
 .panel-heading {
   text-align: center;
@@ -96,4 +123,16 @@ $bs-grey: #e7e7e7;
 
 .row-list {
   padding-left: 15px;
+}
+
+/* forms */
+.row-form {
+  > .row {
+    margin-bottom: 5px;
+  }
+}
+
+#btn-profile {
+  margin: 30px auto 0 auto;
+  width: 85%;
 }

@@ -11,20 +11,26 @@
     <div class="panel-body">
       <%= form_for [@profile.user, @profile] do |f| %>
 
-        <div class="col-sm-4 col-sm-offset-1">
-          <h4>Basic Information</h3>
+        <div class="col-sm-4 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+          <h3 class="underscore inline">Places</h3>
           <%= render 'places_form', f: f %>
-          <h3>Contact Information</h3>
-          <%= render 'contact_information_form', f: f %>
+          <h3 class="underscore inline">Contact Information</h3>
+          <%= render 'contact_information' %>
         </div>
 
-        <div class="col-sm-5 col-sm-offset-1">
-          <%= render 'about_me_form', f: f %>
+        <div class="col-sm-5 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+          <h3 class="underscore inline">About Me</h3>
+          <p>
+            <%= f.text_area :about_me, rows: 5, class: "full-width" %>
+          </p>
         </div>
 
-        <%= f.submit "Update Profile",
-          class: "btn btn-primary btn-lg btn-block",
-          id: "update-profile" %>
+        <div class="col-sm-12">
+          <%= f.submit "Update Profile",
+            class: "btn btn-primary btn-lg btn-block",
+            id: "btn-profile" %>
+        </div>
+
       <% end %>
     </div>
 
