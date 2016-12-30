@@ -2,10 +2,8 @@
 class User < ApplicationRecord
   before_create :generate_token
   validates :password, length: { minimum: 5 }, allow_nil: true
-  validate :valid_birthdate, if: :birthdate
   validates :first_name, :last_name, presence: true
   validates :email, presence: true, uniqueness: true
-  belongs_to :gender
   has_secure_password
   has_one :profile, dependent: :destroy
   has_one :profile_photo, class_name: 'Photo'
@@ -97,12 +95,6 @@ class User < ApplicationRecord
   def self.name_search(name)
     where("first_name ILIKE :name OR last_name ILIKE :name",
           name: "%#{ name }%")
-  end
-
-  def valid_birthdate
-    if birthdate > Date.today + 1
-      errors.add(:birthdate, "must be in the past")
-    end
   end
 
   def photo

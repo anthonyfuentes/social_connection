@@ -1,6 +1,7 @@
 
 class ProfilesController < ApplicationController
   before_action :get_profile, only: [:show, :edit, :update]
+  before_action :get_user, only: [:show, :edit]
   skip_before_action :correct_user, only: [:show]
 
   def show
@@ -22,6 +23,10 @@ class ProfilesController < ApplicationController
       @profile = Profile.find_by(user_id: params[:user_id])
     end
 
+    def get_user
+      @user = User.find_by(id: params[:user_id])
+    end
+
     def successful_update
       flash[:success] = "Profile Updated"
       redirect_to user_profile_path(params[:user_id])
@@ -34,7 +39,7 @@ class ProfilesController < ApplicationController
 
     def profile_params
       params.require(:profile).permit(:education, :home_town, :current_town,
-                                      :phone_number, :words_to_live_by,
-                                      :about_me, :profile_photo_id, :cover_photo_id)
+                                      :about_me, :profile_photo_id,
+                                      :cover_photo_id)
     end
 end

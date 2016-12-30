@@ -5,12 +5,10 @@ FactoryGirl.define do
   end
   factory :user, aliases: [:author, :friended, :friender] do
     auth_token  'authorized'
-    birthdate   Date.today
     first_name  'First'
     last_name   'Last'
     password    'password'
     sequence(:email) { |n| "#{n}@example.com" }
-    gender
     trait :with_profile do
       association :profile, factory: :profile
     end
@@ -46,7 +44,4 @@ FactoryGirl.define do
     association :likable, factory: :comment
   end
 
-  factory :gender do
-    sequence(:name) { |n| "#{n}free" }
-  end
 end

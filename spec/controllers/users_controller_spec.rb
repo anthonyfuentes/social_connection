@@ -14,8 +14,7 @@ describe UsersController do
     context 'valid data provided' do
       describe '#create' do
         it 'creates a new user record' do
-          gender = create(:gender)
-          valid_data = attributes_for(:user, gender_id: gender.id)
+          valid_data = attributes_for(:user)
 
           expect {
             process :create, params: { user: valid_data }
@@ -27,9 +26,7 @@ describe UsersController do
     context 'invalid data provided' do
       describe '#create' do
         it 'does not create a new user record' do
-          gender = create(:gender)
-          invalid_data = attributes_for(:user, gender_id: gender.id,
-                                        first_name: nil)
+          invalid_data = attributes_for(:user, first_name: nil)
 
           expect {
             process :create, params: { user: invalid_data }

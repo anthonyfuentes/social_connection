@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161216204520) do
+ActiveRecord::Schema.define(version: 20161230160312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,13 +47,6 @@ ActiveRecord::Schema.define(version: 20161216204520) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["friender_id", "friended_id"], name: "index_friendings_on_friender_id_and_friended_id", unique: true, using: :btree
-  end
-
-  create_table "genders", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_genders_on_name", unique: true, using: :btree
   end
 
   create_table "likes", force: :cascade do |t|
@@ -93,8 +86,6 @@ ActiveRecord::Schema.define(version: 20161216204520) do
     t.string   "education"
     t.string   "home_town"
     t.string   "current_town"
-    t.string   "phone_number"
-    t.text     "words_to_live_by"
     t.text     "about_me"
     t.integer  "profile_photo_id"
     t.integer  "cover_photo_id"
@@ -109,8 +100,6 @@ ActiveRecord::Schema.define(version: 20161216204520) do
     t.string   "auth_token"
     t.string   "first_name"
     t.string   "last_name"
-    t.date     "birthdate"
-    t.integer  "gender_id"
     t.index ["auth_token"], name: "index_users_on_auth_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end

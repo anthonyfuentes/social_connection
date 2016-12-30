@@ -1,5 +1,6 @@
 
 module SignInMacros
+
   def sign_in_as_new_user
     user = create(:user, :with_profile)
     sign_in(user: user)
@@ -15,16 +16,18 @@ module SignInMacros
   end
 
   def user_sign_in(user, args)
-    args_to_pass = { email: user.email,
-                     password: user.password }.merge(args)
-    credential_sign_in(args_to_pass)
+    user_credentials = { email: user.email,
+                         password: user.password }.merge(args)
+    credential_sign_in(user_credentials)
   end
 
   def credential_sign_in(args)
     visit root_path
-    click_on('Sign In')
-    fill_in('Email', with: args.fetch(:email))
-    fill_in('sign-in-password', with: args.fetch(:password))
+    within('header.navbar') do
+      fill_in('Email', with: args.fetch(:email))
+      fill_in('password', with: args.fetch(:password))
+    end
     click_on('Sign In')
   end
+
 end
