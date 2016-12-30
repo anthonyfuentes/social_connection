@@ -1,35 +1,37 @@
 
-<div class="row custom-info">
-  <div class="col-xs-4 custom-info-label">
-    <div class="row">
-      Education
+<div class="row-list">
+
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="row">
+        <span class="list-label">Education</span>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <%= @profile.education %>
     </div>
   </div>
-  <div class="col-xs-8">
-    <%= @profile.education %>
-  </div>
-</div>
 
-<div class="row custom-info">
-  <div class="col-xs-4 custom-info-label">
-    <div class="row">
-      Hometown
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="row">
+        <span class="list-label">Hometown</span>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <%= @profile.home_town %>
     </div>
   </div>
-  <div class="col-xs-8">
-    <%= @profile.home_town %>
-  </div>
-</div>
 
-<div class="row custom-info">
-  <div class="col-xs-4 custom-info-label">
-    <div class="row">
-      Currently Lives
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="row">
+        <span class="list-label">Current Town</span>
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <%= @profile.current_town %>
     </div>
   </div>
-  <div class="col-xs-8">
-    <%= @profile.current_town %>
-  </div>
+
 </div>
-
-

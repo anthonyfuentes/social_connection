@@ -9,18 +9,17 @@
     </div>
 
     <div class="panel-body">
+      <div class="col-sm-4 col-sm-offset-1">
+        <h3 class="underscore inline">Places</h3>
+        <%= render 'places' %>
+        <h3 class="underscore inline">Contact Information</h3>
+        <%= render 'contact_information' %>
+      </div>
 
-        <div class="col-sm-4 col-sm-offset-1">
-          <h3>Places</h3>
-          <%= render 'places' %>
-          <h3>Contact Information</h3>
-          <%= render 'contact_information' %>
-        </div>
-
-        <div class="col-sm-5 col-sm-offset-1">
-          <%= render 'about_me' %>
-        </div>
-
+      <div class="col-sm-5 col-sm-offset-1">
+        <h3 class="underscore inline">About Me</h3>
+        <p><%= @profile.about_me %></p>
+      </div>
     </div>
 
   </div>

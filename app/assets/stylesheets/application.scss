@@ -5,8 +5,10 @@
 /*
   * variables
   * positioning
+  * decoration
   * modules
     * nav
+    * panels
     * lists
 */
 
@@ -22,6 +24,17 @@ $bs-grey: #e7e7e7;
 */
 .v-offset {
   margin-top: 75px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+/*
+  DECORATION
+*/
+.underscore {
+  border-bottom: 2px solid rgba(128, 128, 128, .5);
 }
 
 /*
@@ -58,6 +71,11 @@ $bs-grey: #e7e7e7;
   }
 }
 
+/* panels */
+.panel-heading {
+  text-align: center;
+}
+
 /* lists */
 .list-simple {
   list-style: none;
@@ -70,4 +88,12 @@ $bs-grey: #e7e7e7;
     margin: 0 0 20px 0;
     text-align: right;
   }
+}
+
+.list-label {
+  font-weight: bold;
+}
+
+.row-list {
+  padding-left: 15px;
 }
