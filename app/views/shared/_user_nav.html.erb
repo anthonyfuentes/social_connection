@@ -1,12 +1,16 @@
 
-<nav class="collapse navbar-collapse" id="navbar">
+<nav class="collapse navbar-collapse" id="main-nav">
+
   <div class="form-group navbar-form navbar-left">
     <%= render 'layouts/shared/search_form' %>
   </div>
+
   <%= link_to "Sign Out", signout_path,
     class: "navbar-text navbar-right",
     method: :delete %>
+
   <%= link_to current_user.first_name, user_profile_path(current_user),
     class: "navbar-text navbar-right navbar-name" %>
+
 </nav>
 

@@ -25,6 +25,10 @@ $bs-grey: #e7e7e7;
 /*
   POSITIONING
 */
+main {
+  margin-top: 75px;
+}
+
 .v-offset {
   margin-top: 75px;
 }
@@ -49,7 +53,7 @@ $bs-grey: #e7e7e7;
 */
 
 /* nav */
-.navbar-static-top {
+.navbar-fixed-top {
   background-color: $primary-blue;
   a {
     color: $primary-white;
@@ -69,7 +73,12 @@ $bs-grey: #e7e7e7;
 }
 
 .navbar-center {
-  margin-left: 200px;
+  display: inline;
+  margin-left: 10%;
+}
+
+.navbar-off-right {
+  margin-left: 25%;
 }
 
 #navbar-search {

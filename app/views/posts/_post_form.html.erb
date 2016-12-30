@@ -5,7 +5,7 @@
   </div>
   <%= simple_form_for [:user, Post.new] do |f| %>
     <div class="panel-body">
-      <%= f.input :body, label: 'Post', placeholder: "Post" %>
+      <%= f.input :body, label: 'Post', placeholder: "..." %>
     </div>
     <div class="panel-footer clearfix">
       <%= f.submit "Post", class: "btn btn-primary pull-right" %>
