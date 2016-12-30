@@ -12,6 +12,7 @@
     * panels
     * lists
     * forms
+    * comments
 */
 
 /*
@@ -135,4 +136,15 @@ $bs-grey: #e7e7e7;
 #btn-profile {
   margin: 30px auto 0 auto;
   width: 85%;
+}
+
+/* comments */
+.comment-box {
+  margin: 15px 0 10px 0;
+}
+
+.comment-photo {
+  > img {
+    margin-top: 5px;
+  }
 }

@@ -1,12 +1,15 @@
 
 <% author = comment.author %>
 
-<div class="custom-comment clearfix">
+<div class="comment-box">
   <div class="row">
+
     <div class="col-xs-2">
       <%= link_to profile_photo(id: author.id, size: :tiny),
-                              user_timeline_path(author.id)%>
+                user_timeline_path(author.id),
+                class: "comment-photo" %>
     </div>
+
     <div class="col-xs-10 clearfix">
       <div class="custom-post-header">
         <%= link_to comment.author_name, user_timeline_path(comment.author_id) %>
@@ -16,5 +19,6 @@
       <%= like_link(comment) %> <%= render 'comments/comment_likes', comment: comment %>
       <%= comment_delete(comment) %>
     </div>
-  </div><!-- row -->
-</div><!-- post comment -->
+
+  </div>
+</div>
