@@ -1,6 +1,5 @@
 
 <nav class="navbar navbar-default">
-  <div class="container">
 
     <nav class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cover-nav" aria-expanded="false">
@@ -13,29 +12,22 @@
 
     <nav class="collapse navbar-collapse" id="cover-nav">
       <ul class="nav navbar-nav navbar-off-right">
+        <li><%= newsfeed_link(params[:user_id].to_i) %></li>
+        <li><%= link_to "Timeline", user_timeline_path %></li>
+        <li><%= link_to "About", user_profile_path %></li>
         <li>
-          <%= newsfeed_link(params[:user_id].to_i) %>
+          <%= link_to "Photos (#{ photo_count(params[:user_id]) })",
+            user_photos_path %>
         </li>
         <li>
-          <%= link_to "Timeline", user_timeline_path %>
-        </li>
-        <li>
-          <%= link_to "About", user_profile_path %>
-        </li>
-        <li>
-          <%= link_to "Photos (#{ photo_count(params[:user_id]) })", user_photos_path %>
-        </li>
-        <li>
-          <%= link_to "Friends (#{ friend_count(params[:user_id]) })",
-            user_friends_path %>
+        <%= link_to "Friends (#{ friend_count(params[:user_id]) })",
+          user_friends_path %>
         </li>
       </ul>
-
       <div class="navbar-nav navbar-right">
         <%= edit_profile %>
         <%= user_friend_link(params[:user_id]) %>
       </div>
     </nav>
 
-  </div>
 </nav>
