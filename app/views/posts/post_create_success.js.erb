@@ -1,0 +1,8 @@
+
+var post = "<%= j(render @post) %>";
+var $post = $(post);
+var $postContainer = $(".post-container");
+var $clearableInputs = $(".clearable");
+
+$clearableInputs.val("");
+$postContainer.prepend($post);

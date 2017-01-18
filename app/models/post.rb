@@ -7,4 +7,9 @@ class Post < ApplicationRecord
   has_many :likes, as: :likable
   has_many :likers, through: :likes, source: :user
   has_many :comments, as: :commentable, dependent: :destroy
+
+  def author_id
+    author.id
+  end
+
 end

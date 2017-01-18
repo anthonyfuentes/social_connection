@@ -1,0 +1,13 @@
+
+var comment = "<%= j(render @comment) %>";
+var $comment = $(comment);
+var $commentContainer = $("#comment-container-"
+                          + "<%= j("#{ @comment.commentable_type }") %>-"
+                          + "<%= j("#{ @comment.commentable_id }") %>");
+var $clearableInputs = $("#clearable-comment-post-"
+                          + "<%= j("#{ @comment.commentable_id }") %>");
+
+console.log($clearableInputs);
+
+$clearableInputs.val("");
+$commentContainer.append($comment);

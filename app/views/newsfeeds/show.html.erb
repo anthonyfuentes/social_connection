@@ -1,18 +1,19 @@
 
-<%= render partial: 'users/shared/cover' %>
+<%= render partial: "users/shared/cover" %>
 
 <section class="row">
 
   <div class="col-sm-5">
     <div class="row">
-      <%= render 'newsfeed_friends_panel' %>
+      <%= render "newsfeed_friends_panel" %>
     </div>
   </div>
 
-  <div class="col-sm-7 custom-margin">
+  <div class="col-sm-7">
     <%= post_form(params[:user_id].to_i) %>
-
-    <%= render 'posts/post_history', posts: @newsfeed.posts %>
+    <div class=" post-container">
+      <%= render "posts/post_history", posts: @newsfeed.posts %>
+    </div>
   </div>
 
 </section>

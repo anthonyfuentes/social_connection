@@ -14,7 +14,10 @@ class CommentsController < ApplicationController
 
   private
     def successful_create
-      redirect_to request.referrer
+      respond_to do |format|
+        format.html { redirect_to request.referer }
+        format.js { render :comment_create_success }
+      end
     end
 
     def failed_create

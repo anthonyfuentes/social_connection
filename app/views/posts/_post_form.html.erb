@@ -3,9 +3,10 @@
   <div class="panel-heading">
     <h4>Post</h4>
   </div>
-  <%= simple_form_for [:user, Post.new] do |f| %>
+  <%= simple_form_for [:user, Post.new], remote: true do |f| %>
     <div class="panel-body">
-      <%= f.input :body, label: 'Post', placeholder: "..." %>
+      <%= f.input :body, label: "Post", placeholder: "...",
+                  input_html: { class: "clearable" }%>
     </div>
     <div class="panel-footer clearfix">
       <%= f.submit "Post", class: "btn btn-primary pull-right" %>

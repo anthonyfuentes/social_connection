@@ -13,7 +13,10 @@ class PostsController < ApplicationController
 
   private
     def successful_create
-      redirect_to request.referer
+      respond_to do |format|
+        format.html { redirect_to request.referer }
+        format.js { render :post_create_success }
+      end
     end
 
     def failed_create

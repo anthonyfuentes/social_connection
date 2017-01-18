@@ -1,7 +1,13 @@
 
-<%= simple_form_for Comment.new do |f| %>
-  <%= f.input :body, label: "Comment", placeholder: "..." %>
-  <%= f.input :commentable_id, as: :hidden, input_html: { value: commentable.id } %>
-  <%= f.input :commentable_type, as: :hidden, input_html: { value: commentable.class.name } %>
+<%= simple_form_for Comment.new, remote: true do |f| %>
+  <%= f.input :body, label: "Comment",
+    placeholder: "...",
+    input_html: { id: "clearable-comment-post-#{commentable.id}" } %>
+  <%= f.input :commentable_id,
+    as: :hidden,
+    input_html: { value: commentable.id } %>
+  <%= f.input :commentable_type,
+    as: :hidden,
+    input_html: { value: commentable.class.name } %>
   <%= f.submit "Comment", class: "btn btn-primary" %>
 <% end %>

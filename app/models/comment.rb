@@ -15,4 +15,12 @@ class Comment < ApplicationRecord
     author.id
   end
 
+  def commentable_type
+    commentable.class.to_s.downcase
+  end
+
+  def commentable_id
+    commentable.id
+  end
+
 end
