@@ -2,3 +2,5 @@
 var $comment = $("#comment-<%= j(@comment.id.to_s) %>");
 
 $comment.remove();
+
+flashMessages.display("<%= j(render "layouts/shared/flash_messages") %>");

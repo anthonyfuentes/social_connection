@@ -22,10 +22,14 @@ class CommentsController < ApplicationController
 
     def failed_create
       flash[:danger] = @comment.errors.full_messages
-      redirect_to request.referrer
+      respond_to do |format|
+        format.html { redirect_to request.referer }
+        format.js { render :comment_create_failure }
+      end
     end
 
     def successful_destroy
+      flash[:success] = "Comment removed."
       respond_to do |format|
         format.html { redirect_to request.referer }
         format.js { render :comment_destroy_success }

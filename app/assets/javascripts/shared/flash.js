@@ -5,12 +5,12 @@ var flashMessages = (function(){
 
   var display = function(flash){
     $flashContainer = $("#flash-container");
-    $flashContainer.html(flash).fadeOut(3000);
-    setTimeout(_removeFlash, 2000);
+    $flashContainer.html(flash);
+    setTimeout(_removeFlash, 3000);
   };
 
   var _removeFlash = function(){
-    $flashContainer.slideUp();
+    $flashContainer.fadeOut();
   };
 
   return {

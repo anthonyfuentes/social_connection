@@ -21,7 +21,10 @@ class PostsController < ApplicationController
 
     def failed_create
       flash[:danger] = @post.errors.full_messages
-      redirect_to request.referer
+      respond_to do |format|
+        format.html { redirect_to request.referer }
+        format.js { render :post_create_failure }
+      end
     end
 
     def successful_destroy
