@@ -1,0 +1,6 @@
+
+$friendButton = $(".btn-friend");
+
+$friendButton.replaceWith("<%= j(user_friend_link(params[:user_id])) %>");
+
+flashMessages.display("<%= j(render "layouts/shared/flash_messages") %>");

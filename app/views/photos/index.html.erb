@@ -2,29 +2,24 @@
 <%= render partial: 'users/shared/cover' %>
 
 <section class="row">
-  <div class="panel panel-default">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
 
-    <div class="panel-heading clearfix">
-      <h2>Photos
-        <%= add_photo_link(params[:user_id].to_i) %>
-      </h2>
+      <div class="panel-heading clearfix">
+        <h2>Photos
+          <%= add_photo_link(params[:user_id].to_i) %>
+        </h2>
+      </div>
+
+      <div class="panel-body">
+        <div class="col-sm-12">
+          <% @user.photos.each_slice(4) do |photos| %>
+            <%= render 'photos/photos_row', photos: photos %>
+          <% end %>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
 
-    <div class="panel-body">
-      <div class="col-sm-12">
-        <% @user.photos.each_slice(4) do |photos| %>
-          <%= render 'photos/photos_row', photos: photos %>
-        <% end %>
-      </div><!-- left column -->
-    </div><!-- panel body -->
-
-  </div><!-- panel -->
-</section><!-- friends section -->
-
-<!-- JQUERY -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-<!-- MINIFIED BOOTSTRAP JS -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
-</html>

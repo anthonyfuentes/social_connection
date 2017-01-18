@@ -20,7 +20,11 @@ class FriendingsController < ApplicationController
 
   private
     def successful_create
-      redirect_to request.referrer
+      flash[:success] = "Friend added."
+      respond_to do |format|
+        format.html { redirect_to request.referrer }
+        format.js { render :friending_create_success }
+      end
     end
 
     def failed_create
@@ -28,7 +32,11 @@ class FriendingsController < ApplicationController
     end
 
     def successful_destroy
-      redirect_to request.referrer
+      flash[:success] = "User unfriended."
+      respond_to do |format|
+        format.html { redirect_to request.referrer }
+        format.js { render :friending_destroy_success }
+      end
     end
 
     def failed_destroy

@@ -25,12 +25,17 @@ module FriendingsHelper
 
   def friend_link(other_user_id)
     link_to "Friend Me", friendings_path(user_id: other_user_id),
-      method: :post, class: friend_link_styling, style: 'color:#fff'
+                method: :post,
+                class: friend_link_styling,
+                style: "color:#fff",
+                remote: true
   end
 
   def unfriend_link(other_user_id)
     link_to "Unfriend", part_ways_path(user_id: other_user_id),
-                class: friend_link_styling, style: 'color:#fff'
+                class: friend_link_styling,
+                style: "color:#fff",
+                remote: true
   end
 
   def friend_link_styling

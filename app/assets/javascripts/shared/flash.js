@@ -10,7 +10,7 @@ var flashMessages = (function(){
   };
 
   var _removeFlash = function(){
-    $flashContainer.fadeOut();
+    $flashContainer.children("ul").fadeOut();
   };
 
   return {

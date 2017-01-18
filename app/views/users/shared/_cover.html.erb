@@ -2,17 +2,19 @@
 <% user = User.find(params[:user_id]) %>
 
 <section class="row">
+  <div class="col-sm-12">
 
-  <div class="cover"
-       style="background-image: url("https:<%= cover_photo(id: params[:user_id]) %>")">
-    <div class="cover-inner clearfix">
-      <div class="pull-left">
-        <%= profile_photo(id: params[:user_id], styling: "img-thumbnail") %>
-      </div>
-      <h1 class="cover-name pull-left"><%= user.name %></h1>
+    <div class="cover"
+         style="background-image: url("https:<%= cover_photo(id: params[:user_id]) %>")">
+         <div class="cover-inner clearfix">
+           <div class="pull-left">
+             <%= profile_photo(id: params[:user_id], styling: "img-thumbnail") %>
+           </div>
+           <h1 class="cover-name pull-left"><%= user.name %></h1>
+         </div>
     </div>
+
+    <%= render partial: "users/shared/cover_nav" %>
+
   </div>
-
-  <%= render partial: "users/shared/cover_nav" %>
-
 </section>
