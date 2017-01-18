@@ -1,3 +1,6 @@
 
-<%= like_link(likable) %>
-<%= likers_display(likable) %>
+
+<div  id="likes-section-<%= "#{likable.class.to_s.downcase}-#{likable.id}" %>" class="inline">
+  <%= like_link(likable) %>
+  <%= likers_display(likable) %>
+</div>

@@ -14,9 +14,7 @@
         said on <%= comment.created_at %>
       </div>
       <p><%= comment.body %></p>
-      <div id="likes-section-comment-<%= comment.id.to_s %>">
-        <%= render "shared/likes", likable: comment %>
-      </div>
+      <%= render "shared/likes", likable: comment %>
       <%= comment_delete(comment) %>
     </div>
 
