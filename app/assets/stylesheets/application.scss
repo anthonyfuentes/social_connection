@@ -7,12 +7,13 @@
   * positioning
   * decoration
   * modules
-    * nav
-    * cover
-    * panels
-    * lists
-    * forms
     * comments
+    * cover
+    * flash
+    * forms
+    * lists
+    * nav
+    * panels
 */
 
 /*
@@ -56,6 +57,80 @@ main {
   MODULES
 */
 
+/* comments */
+.comment-box {
+  margin: 15px 0 10px 0;
+}
+
+.comment-photo {
+  > img {
+    margin-top: 5px;
+  }
+}
+
+/* cover */
+.cover {
+  background-size: cover;
+  height: 300px;
+}
+
+.cover-inner {
+  position: relative;
+  left: 20px;
+  top: 120px;
+  z-index: 1;
+}
+
+.cover-name {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .85);
+  position: relative;
+  left: 20px;
+  top: 100px;
+}
+
+/* flash */
+#flash-container {
+  position: fixed;
+  width: 100%;
+  top: 75px;
+  z-index: 100;
+}
+
+/* forms */
+.row-form {
+  > .row {
+    margin-bottom: 5px;
+  }
+}
+
+#btn-profile {
+  margin: 30px auto 0 auto;
+  width: 85%;
+}
+
+/* lists */
+.list-simple {
+  list-style: none;
+  font-size: 1.25em;
+}
+
+.list-right {
+  padding: 20px 40px 0 0;
+  > li {
+    margin: 0 0 20px 0;
+    text-align: right;
+  }
+}
+
+.list-label {
+  font-weight: bold;
+}
+
+.row-list {
+  padding-left: 15px;
+}
+
 /* nav */
 .navbar-fixed-top {
   background-color: $primary-blue;
@@ -91,73 +166,8 @@ main {
   }
 }
 
-/* cover */
-.cover {
-  background-size: cover;
-  height: 300px;
-}
-
-.cover-inner {
-  position: relative;
-  left: 20px;
-  top: 120px;
-  z-index: 1;
-}
-
-.cover-name {
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, .85);
-  position: relative;
-  left: 20px;
-  top: 100px;
-}
-
 /* panels */
 .panel-heading {
   text-align: center;
 }
 
-/* lists */
-.list-simple {
-  list-style: none;
-  font-size: 1.25em;
-}
-
-.list-right {
-  padding: 20px 40px 0 0;
-  > li {
-    margin: 0 0 20px 0;
-    text-align: right;
-  }
-}
-
-.list-label {
-  font-weight: bold;
-}
-
-.row-list {
-  padding-left: 15px;
-}
-
-/* forms */
-.row-form {
-  > .row {
-    margin-bottom: 5px;
-  }
-}
-
-#btn-profile {
-  margin: 30px auto 0 auto;
-  width: 85%;
-}
-
-/* comments */
-.comment-box {
-  margin: 15px 0 10px 0;
-}
-
-.comment-photo {
-  > img {
-    margin-top: 5px;
-  }
-}

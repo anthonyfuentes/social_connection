@@ -25,6 +25,7 @@ class PostsController < ApplicationController
     end
 
     def successful_destroy
+      flash[:success] = "Post removed."
       respond_to do |format|
         format.html { redirect_to request.referer }
         format.js { render :post_destroy_success }
