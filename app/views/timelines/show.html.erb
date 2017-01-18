@@ -6,16 +6,13 @@
   <aside class="col-sm-5">
     <div class="row">
       <%= render "users/timeline_about" %>
-
       <%= render "users/timeline_photo_panel" %>
-
       <%= render "users/timeline_friends_panel" %>
     </div>
   </aside>
 
   <div class="col-sm-7 custom-margin">
     <%= post_form(params[:user_id].to_i) %>
-
     <%= render "posts/post_history", posts: @timeline.posts %>
   </div>
 
