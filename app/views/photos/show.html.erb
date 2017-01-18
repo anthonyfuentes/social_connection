@@ -15,9 +15,7 @@
 
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
-    <div  id="likes-section-photo-<%= @photo.id.to_s %>" class="inline">
-      <%= render "shared/likes", likable: @photo %>
-    </div>
+    <%= render "shared/likes", likable: @photo %>
     <%= profile_photo_link(params[:user_id].to_i, @photo) %>
     <%= cover_photo_link(params[:user_id].to_i, @photo) %>
     <%= delete_photo_link(params[:user_id].to_i, @photo) %>

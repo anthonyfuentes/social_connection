@@ -1,8 +1,6 @@
 
 <div class="panel-footer">
-  <div  id="likes-section-post-<%= post.id.to_s %>" class="inline">
-    <%= render "shared/likes", likable: post %>
-  </div>
+  <%= render "shared/likes", likable: post %>
   <%= post_delete(post) %>
   <%= render "comments/comment_form", commentable: post %>
   <%= render "shared/comments", commentable: post %>
