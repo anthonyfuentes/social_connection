@@ -22,6 +22,6 @@
     <%= cover_photo_link(params[:user_id].to_i, @photo) %>
     <%= delete_photo_link(params[:user_id].to_i, @photo) %>
     <%= render "comments/comment_form", commentable: @photo %>
-    <%= render @photo.sorted_comments %>
+    <%= render "shared/comments", commentable: @photo %>
   </div>
 </div>

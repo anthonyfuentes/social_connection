@@ -5,7 +5,5 @@
   </div>
   <%= post_delete(post) %>
   <%= render "comments/comment_form", commentable: post %>
-  <div id="comment-container-post-<%= post.id.to_s %>">
-    <%= render post.sorted_comments %>
-  </div>
+  <%= render "shared/comments", commentable: post %>
 </div>
