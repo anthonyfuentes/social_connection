@@ -12,21 +12,27 @@ module LikesHelper
   def unlike_link(likable)
     likable_type = type(likable)
     link_to "Unlike", likes_path(likable_id: likable.id,
-                                 likable_type: likable_type), method: :delete
+                                 likable_type: likable_type),
+                                 class: "block",
+                                 method: :delete,
+                                 remote: true
   end
 
   def create_like_link(likable)
     likable_type = type(likable)
     link_to "Like", likes_path(likable_id: likable.id,
-                               likable_type: likable_type), method: :post
+                               likable_type: likable_type),
+                               class: "block",
+                               method: :post,
+                               remote: true
   end
 
   def type(likable)
     likable.class.name
   end
 
-  def likers_display(post, count = 2)
-    likers = post.likers
+  def likers_display(likable, count = 2)
+    likers = likable.likers
     if likers.length > 1
       like_display = multiple_likers(likers, count)
     elsif likers.length == 1

@@ -1,0 +1,7 @@
+
+$likesSection = $("#likes-section-"
+  + "<%= @like.likable_type.downcase %>-"
+  + "<%= @like.likable_id %>");
+
+$likesSection.html("<%= j(render "shared/likes",
+                          likable: @like.likable ) %>");

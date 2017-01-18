@@ -7,4 +7,5 @@ class Like < ApplicationRecord
   def user_name
     user.name
   end
+
 end

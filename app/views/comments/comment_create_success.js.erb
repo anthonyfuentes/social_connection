@@ -7,7 +7,5 @@ var $commentContainer = $("#comment-container-"
 var $clearableInputs = $("#clearable-comment-post-"
                           + "<%= j("#{ @comment.commentable_id }") %>");
 
-console.log($clearableInputs);
-
 $clearableInputs.val("");
 $commentContainer.append($comment);
