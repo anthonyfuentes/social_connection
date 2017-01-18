@@ -26,7 +26,10 @@ class CommentsController < ApplicationController
     end
 
     def successful_destroy
-      redirect_to request.referrer
+      respond_to do |format|
+        format.html { redirect_to request.referer }
+        format.js { render :comment_destroy_success }
+      end
     end
 
     def failed_destroy

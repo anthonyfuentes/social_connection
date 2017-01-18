@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy ? successful_delete : failed_delete
+    @post.destroy ? successful_destroy : failed_destroy
   end
 
   private
@@ -24,12 +24,14 @@ class PostsController < ApplicationController
       redirect_to request.referer
     end
 
-    def successful_delete
-      flash[:success] = "#{ @post.body[0..25] } Deleted"
-      redirect_to request.referer
+    def successful_destroy
+      respond_to do |format|
+        format.html { redirect_to request.referer }
+        format.js { render :post_destroy_success }
+      end
     end
 
-    def failed_delete
+    def failed_destroy
       flash[:danger] = "Something isn't quite right, give us a sec"
       redirect_to request.referer
     end

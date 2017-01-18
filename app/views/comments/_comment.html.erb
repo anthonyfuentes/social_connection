@@ -1,5 +1,5 @@
 
-<div class="comment-box">
+<div class="comment-box" id="comment-<%= comment.id.to_s %>">
   <div class="row">
 
     <div class="col-xs-2">
@@ -14,7 +14,7 @@
         said on <%= comment.created_at %>
       </div>
       <p><%= comment.body %></p>
-      <%= like_link(comment) %> <%= render 'comments/comment_likes', comment: comment %>
+      <%= like_link(comment) %> <%= render "comments/comment_likes", comment: comment %>
       <%= comment_delete(comment) %>
     </div>
 

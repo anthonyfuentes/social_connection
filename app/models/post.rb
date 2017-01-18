@@ -12,4 +12,8 @@ class Post < ApplicationRecord
     author.id
   end
 
+  def author_name
+    author.name
+  end
+
 end
