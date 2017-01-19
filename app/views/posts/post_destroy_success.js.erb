@@ -3,5 +3,5 @@ var $post = $("#post-<%= j(@post.id.to_s) %>");
 
 $post.remove();
 
-flashMessages.display("<%= j(render "layouts/shared/flash_messages") %>");
+flashMessages.display("<%= j(render "shared/flash_messages") %>");
 
