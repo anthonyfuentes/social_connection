@@ -14,6 +14,7 @@
     * lists
     * nav
     * panels
+  * media queries
 */
 
 /*
@@ -166,9 +167,7 @@ main {
 }
 
 #navbar-search {
-  .form-control {
-    width: 300px;
-  }
+  width: 40%;
 }
 
 /* panels */
@@ -176,3 +175,15 @@ main {
   text-align: center;
 }
 
+
+/* media queries */
+@media (max-width: 766px) {
+  #navbar-search {
+    width: 70%;
+
+    input[type="text"] {
+      width: 70%;
+      margin-left: -5%;
+    }
+  }
+}
