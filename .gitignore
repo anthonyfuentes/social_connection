@@ -27,3 +27,6 @@ public/assets
 
 # Ignore .irbrc
 .irbrc
+
+# Ignore _TODO.txt
+TODO.txt
