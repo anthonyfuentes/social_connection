@@ -25,5 +25,5 @@ Fully functional social networking site.
   1. `$ rails db:create`
   2. `$ rails db:migrate`
   3. `$ rails db:seed`
-5. Start a Rails server $ rails s
+5. Start a Rails server `$ rails s`
 6. Uploading photos requires an Amazon AWS bucket and credentials
