@@ -5,13 +5,6 @@ Fully functional social networking site.
 
 ![screenshot of the social connection home page](https://github.com/anthonyfuentes/social_connection/blob/master/social-connection.png)
 
-## Using the Deployed Application
-1. Visit http://socialconnection.herokuapp.com/ (May take ~20 seconds to load - Heroku Hobby Dev)
-2. Sign in as example user
-  * Email: user@example.com
-  * Password: password
-3. Visit user profile pages, upload photos, post, comment, like
-
 ## Technical Higlights
 1. Back-end
   * Delayed::Job email handling
